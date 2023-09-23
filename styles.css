@@ -24,55 +24,27 @@
 /* ======================================================= */
 /* home page style										   */
 /* ======================================================= */
-
 @font-face {
 	font-family: 'Poppins';
 	src: url('Poppins-Regular.ttf');
 }
 
 @media all and (min-width: 600px) {
-	.main {
-		flex: 3;
-	}
-
-	.main {
-		order: 1;
-	}
-
-	.footer {
-		order: 2;
-	}
-
+	.main { flex: 3 }
+	.main { order: 1; }
+	.footer { order: 2; }
 }
 
-
 @media screen and (max-width: 1300px) {
-	.box {
-		width: 80%;
-	}
-
-	.popup {
-		width: 80%;
-	}
-
-	.scrollable-container {
-	    height: 300px;     
-	}
-
+	.box { width: 80%; }
+	.popup { width: 80%; }
+	.scrollable-container { height: 300px; }
 }
 
 @media screen and (max-width: 800px) {
-	.box {
-		width: 60%;
-	}
-
-	.popup {
-		width: 60%;
-	}
-
-	.scrollable-container {
-	    height: 200px;     
-	}
+	.box { width: 60%; }
+	.popup { width: 60%; }
+	.scrollable-container { height: 200px; }
 }
 
 .glow { 
@@ -133,13 +105,9 @@ body {
 	overflow-wrap: break-word:
 }
 
-p {
-	margin: 30px auto;
-}
+p { margin: 30px auto; }
 
-a {
-	text-decoration: none;
-}
+a { text-decoration: none; }
 
 .anchor-register {
 	font-size: 20px;
@@ -157,7 +125,6 @@ a {
 	height: 5px;
 	text-align: center;
 }
-
 
 /* ======================================================= */
 /* Register button style								   */
@@ -208,7 +175,6 @@ a {
 }
  
 @keyframes jello-horizontal {
-	
 	0% { transform: scale3d(1, 1, 1); }
   	30% { transform: scale3d(1.25, 0.75, 1); }
   	40% { transform: scale3d(0.75, 1.25, 1); }
@@ -275,10 +241,8 @@ a {
 	overflow: hidden;
 }
 
-
-
 /* ======================================================= */
-/* Form inside the popup style || User input 			   */
+/* Form fields inside the popup : style || User input 	   */
 /* ======================================================= */
 .container-box {
     margin: 0 auto;
@@ -311,13 +275,11 @@ textarea {
 	border-radius: 10px;
 	border: 1px solid #ccc;
     padding: 8px;
-    margin: 5px 5px -5px -5px;
+    margin: 5px 5px 5px -5px;
     font-family: Poppins, Arial;
 }
 
-select {
-	width: 100%;
-}
+select { width: 100%; }
 
 button  {
     border-radius: 15px 50px 30px;
@@ -327,6 +289,7 @@ button  {
     padding: 10px;
     font-size: 15px;
     font-weight: bold;
+    font-family: Poppins, Arial;
     color: #F5FCCD;
 }
 
