@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Registration Module</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<div class='wrapper'>
+		<article class='main'>
+			<div class="intro-container">
+			<h1 class="glow">Hello 😊</h1>
+				
+			<p>
+				Welcome to "Coding Conventions" Seminar Registration. <br /><br />
+
+				Join us as we discover the most recent programming trends and 
+				standards of excellence. Register now to ensure your place! 
+			</p> 
+
+			<button class='Btn'> <a class='anchor-register' href="#popup1">Register</a> </button>
+			</div>	
+		</article>
+
+		<p class="footer">© 2023 VILM Inc.</p>
+	</div>
+
+	<div id="popup1" class="overlay">
+		<div class="popup">
+			<div class="scrollable-container"><div class="container-box">
+			    <h3>Registration Form</h3>
+			    <form id="registration-form" >
+            
+			    <label for="name">Name:</label>
+			    <input type="text" id="name" name="name" placeholder="Juan Dela Cruz" required>
+			          
+				<label for="course">Course:</label>
+				<select id="course" name="course" required>
+
+			        <option value="" disabled selected hidden>Select Course</option>
+
+			        <optgroup label="College of Computer Studies">
+			        	<option value="Computer-Science">Computer Science</option>
+			        	<option value="Information-Technology">Information Technology</option>
+			        	<option value="Information-Systems">Information Systems</option>
+			        	<option value="Interactive-Entertainment">Interactive Entertainment</option>
+			        </optgroup>
+			        <optgroup label="College of Engineering">
+			        	<option value="Civil-Engineering">Civil Engineering</option>
+			        	<option value="Computer-Engineering">Computer Engineering</option>
+			        	<option value="Electronics-Engineering">Electronics Engineering</option>
+			        	<option value="Mechanical-Engineering">Mechanical Engineering</option>
+			        </optgroup>
+			        <optgroup label="College of Art & Sciences">
+			        	<option value="Architecture">Architecture</option>
+			        	<option value="Asian-Studies">Asian Studies</option>
+			        	<option value="Chemistry">Chemistry</option>
+			        	<option value="Communication-Studies">Communication Studies</option>
+			        </optgroup>	
+			        <optgroup label="College of Business">
+			        	<option value="Accounting">Accounting</option>
+			        	<option value="Business-Administration">Business Administration</option>
+			        	<option value="Human-Resources">Human Resources</option>
+			        	<option value="Marketing">Marketing</option>
+			        </optgroup> 
+				</select>
+			              
+			    <label for="year">Year Level:</label>
+			    <select id="year" name="year" required>
+			        <option value="" disabled selected hidden>Select Year</option>
+			        <option value="1">1</option>
+			        <option value="2">2</option>
+			        <option value="3">3</option>
+			        <option value="4">4</option>
+			    </select>
+			        
+			    <label>Gender:</label> <br />
+			        <input type="radio" id="male" name="gender" value="Male" required> Male
+			        <input type="radio" id="female" name="gender" value="Female" required> Female
+			    <br />    
+
+			    <label for="address">Address:</label>
+			    <textarea type="text" id="address" name="address" placeholder="4321 Sesame Street, Muntinlupa City" required></textarea>     
+			            
+			    <label for="email">Email:</label>
+			    <input type="email" id="email" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder="someone@example.com" required>
+			                
+			    <label for="contact">Contact Number:</label>
+			    <input type="tel" id="contact" name="contact" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" placeholder="0912-345-6789" required>
+
+				<div class="btn-container">
+					<button id="register-btn">Register</button>
+					<button id="clear-btn" onclick="clearButton()">Clear</button>
+					<button><a class="anchor-exit" href="#">Exit</a></button>
+				</div>
+				
+				</form> 
+    		</div></div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+ /*	CS0053 - Technical 2 Source Code for 1T AY 2023-2024
+
+    Program:        GUI-Based Registration Module
+    Programmer(s): 
+                    Vassili L. Inacay (L)
+                    Katryna Lei V. Martin 
+    Section:        AN31
+    Start Date:     September 21, 2023
+    End Date:       September 24, 2023
+*/
+
+ /*
+    REGISTRATION FORM'S THEME
+    #000000 - black
+    #11324D - dark blue
+    #DAF5FF - light blue
+    #12486B - dark blue green || rgb(18, 72, 107)
+    #419197 - aquamarine 	  || rgb(65, 145, 151)
+    #78D6C6 - teal 			  || rgb(120, 214, 198)
+    #FAF0E4 - beige
+    #F5FCCD - yellow
+*/
+
+/* ======================================================= */
+/* home page style										   */
+/* ======================================================= */
+
+@font-face {
+	font-family: 'Poppins';
+	src: url('Poppins-Regular.ttf');
+}
+
+@media all and (min-width: 600px) {
+	.main {
+		flex: 3;
+	}
+
+	.main {
+		order: 1;
+	}
+
+	.footer {
+		order: 2;
+	}
+
+}
+
+
+@media screen and (max-width: 1300px) {
+	.box {
+		width: 80%;
+	}
+
+	.popup {
+		width: 80%;
+	}
+
+	.scrollable-container {
+	    height: 300px;     
+	}
+
+}
+
+@media screen and (max-width: 800px) {
+	.box {
+		width: 60%;
+	}
+
+	.popup {
+		width: 60%;
+	}
+
+	.scrollable-container {
+	    height: 200px;     
+	}
+}
+
+.glow { 
+	font-family: Poppins, Arial;
+    color: black;
+    font-size: 50px;
+	text-align: left;
+	margin: 30px auto;
+    -webkit-animation: glow 0.125s ease-in-out infinite alternate;
+    -moz-animation: glow 0.125s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 5px #eeeeee, 0 0 10px #419197, 0 0 15px #419197, 0 0 20px #419197;
+        text-shadow: 0 0 5px #eeeeee, 0 0 10px #78D6C6, 0 0 15px #78D6C6, 0 0 20px #78D6C6;
+    } to {
+        text-shadow: 0 0 5px #eeeeee, 0 0 10px #F5FCCD, 0 0 15px #F5FCCD, 0 0 20px #F5FCCD;
+        text-shadow: 0 0 5px #eeeeee, 0 0 10px #12486B, 0 0 15px #12486B, 0 0 20px #12486B;
+    }
+} 
+
+body {
+	background: #FAF0E4;
+	font-family: Poppins, Arial;
+}
+
+.wrapper {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.wrapper > * {
+	padding: 20px;
+	margin: 10px;
+	flex: 1 100%;
+	border-radius: 10px;
+}
+
+.main {
+	font-size: 24px;
+	height: 525px;
+}
+
+.intro-container {
+	background: #DAF5FF;
+	border: 5px double #11324D;
+	border-radius: 40px 80px;;
+	font-size: 18px;
+	font-weight: bold;
+	width: 50%;
+	height: 350px;
+	padding: 20px 40px;
+	margin: 60px auto;
+	overflow-y: auto;
+	overflow-x: hidden;
+	overflow-wrap: break-word:
+}
+
+p {
+	margin: 30px auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+.anchor-register {
+	font-size: 20px;
+	font-weight: bold;
+	margin: 10px;
+	color: #FFFF;
+}
+
+.anchor-register:hover {
+	color: #12486B;
+}
+
+.footer {
+	font-weight: bold;
+	height: 5px;
+	text-align: center;
+}
+
+
+/* ======================================================= */
+/* Register button style								   */
+/* ======================================================= */
+.Btn {
+	align-items: center;
+	background-color: rgb(18, 72, 107);
+	border-radius: 45px;
+	border: none;
+	box-shadow: 0px 10px 10px rgb(120, 214, 198) inset,
+	0px 5px 10px rgb(65, 145, 151),
+	0px -10px 10px rgb(18, 72, 107) inset;
+	color: #000000;
+	height: 40px;
+	cursor: pointer;
+	display: flex;
+	font-family: Poppins, Arial;
+	margin: 0 auto;
+	justify-content: center;
+	position: relative;
+	width: 150px;
+}
+
+.Btn::before {
+	background-color: rgb(65, 145, 151);
+	border-radius: 50%;
+	content: "";
+	filter: blur(1px);
+	height: 2px;
+	position: absolute;
+	width: 70%;
+	top: 7px;
+}
+
+.Btn::after {
+	width: 70%;
+	height: 2px;
+	position: absolute;
+	background-color: rgba(250, 250, 250, 0.137);
+	content: "";
+	filter: blur(1px);
+	bottom: 7px;
+	border-radius: 50%;
+}
+
+.Btn:hover {
+	animation: jello-horizontal 0.7s both;
+}
+ 
+@keyframes jello-horizontal {
+	
+	0% { transform: scale3d(1, 1, 1); }
+  	30% { transform: scale3d(1.25, 0.75, 1); }
+  	40% { transform: scale3d(0.75, 1.25, 1); }
+  	50% { transform: scale3d(1.15, 0.85, 1); }
+  	65% { transform: scale3d(0.95, 1.05, 1); }
+  	75% { transform: scale3d(1.05, 0.95, 1); }
+  	100% { transform: scale3d(1, 1, 1); }
+}
+
+/* ======================================================= */
+/* Popup registration form  							   */
+/* ======================================================= */
+.scrollable-container {
+    overflow: auto; 
+}
+
+.overlay {
+	background: rgba(0, 0, 0, .7);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	position: fixed;
+	transition: opacity 200ms;
+	transition: translate(50%, 50%);
+	visibility: hidden;
+}
+
+.overlay:target {
+	opacity: 1;
+	visibility: visible;
+}
+
+.container {
+	overflow-wrap: ;
+}
+
+.popup {
+	background: #11324D;
+	border-radius: 20px;
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	padding: 20px;
+	transition: all 0.006s ease-in-out;
+	width: 30%;
+	height: auto;
+}
+
+.popup h3 {
+    background: linear-gradient(to top right, #F5FCCD, #12486B,
+                    #419197, #78D6C6);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+	font-size: 30px;
+	font-weight: bold;
+	margin: 5px auto;
+}
+
+.popup .container-box {
+	padding: 20px;
+	overflow: hidden;
+}
+
+
+
+/* ======================================================= */
+/* Form inside the popup style || User input 			   */
+/* ======================================================= */
+.container-box {
+    margin: 0 auto;
+    padding: 20px;																					
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ 																					
+}
+
+label {
+	font-weight: bold;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="tel"],
+select { 
+    width: 96%;
+    padding: 8px;
+    margin: 5px 5px 5px -5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-family: Poppins, Arial;
+}
+
+textarea {
+	width: 96%;
+	resize: none;
+	border-radius: 10px;
+	border: 1px solid #ccc;
+    padding: 8px;
+    margin: 5px 5px -5px -5px;
+    font-family: Poppins, Arial;
+}
+
+select {
+	width: 100%;
+}
+
+button  {
+    border-radius: 15px 50px 30px;
+    width: 6vw;
+    background-color: #12486B;
+    margin: 10px 20px;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #F5FCCD;
+}
+
+button:hover {
+	background: #DAF5FF;
+	color: #12486B;
+}
+
+.anchor-exit {
+	color: #F5FCCD;
+}
+
+.anchor-exit:hover {
+	background: #DAF5FF;
+	color: #12486B;
+}
