@@ -27,31 +27,30 @@ registrationForm.addEventListener('submit', function (event) {
     var email = document.getElementById('email').value;
     var contact = document.getElementById('contact').value;
 
+    var participant = {
+        name : name,
+        course : course,
+        year : year,
+        gender : gender,
+        address : address,
+        email : email,
+        contact : contact
+    }
+
     //  checking if all of the required fields are not empty
     if ( name === '' || course === '' || year === '' || !gender || 
         address === '' || email === '' || contact === '' ) {
         alert('Please complete all required fields.');
         return;
-    } else {
-        var participant = {
-            name : name,
-            course :course,
-            year : year,
-            gender : gender,
-            address : address,
-            email : email,
-            contact : contact
-        }    
-            participantData.push(participant);
+    } else {    
+        participantData.push(participant);
 
-            // displays data in the console & returns a confirmation message
-            console.log("Participant Data:\n", participantData); 
-            alert('Thank you!\nYour registration has been sent.');
-
-            registrationForm.reset(); 
-        
+        // displays data in the console & returns a confirmation message
+        console.log("Participant Data:\n", participantData); 
+        alert('Thank you!\nYour registration has been sent.');
     }
-    
+
+    registrationForm.reset(); 
 });
 
 function clearButton() {
