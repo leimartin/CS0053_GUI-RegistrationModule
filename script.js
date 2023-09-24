@@ -20,7 +20,7 @@ registrationForm.addEventListener('submit', function (event) {
 
     // declaration to be validated
     var name = document.getElementById('name').value;
-    var course = document.getElementById('course').value;
+    var program = document.getElementById('program').value;
     var year = document.getElementById('year').value;
     var gender = document.querySelector('input[name="gender"]:checked').value;
     var address = document.getElementById('address').value;
@@ -29,7 +29,7 @@ registrationForm.addEventListener('submit', function (event) {
 
     var participant = {
         name : name,
-        course : course,
+        program : program,
         year : year,
         gender : gender,
         address : address,
@@ -38,7 +38,7 @@ registrationForm.addEventListener('submit', function (event) {
     }
 
     //  checking if all of the required fields are not empty
-    if ( name === '' || course === '' || year === '' || !gender || 
+    if ( name === '' || program === '' || year === '' || !gender || 
         address === '' || email === '' || contact === '' ) {
         alert('Please complete all required fields.');
         return;

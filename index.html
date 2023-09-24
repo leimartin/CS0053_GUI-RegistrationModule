@@ -8,6 +8,7 @@
 </head>
 <body>
 	<!-- HOME PAGE -->
+	<!-- Gives introductory message to the user -->
 	<div class='wrapper'>
 		<article class='main'>
 			<div class="intro-container">
@@ -28,49 +29,49 @@
 	</div>
 
 	<!-- POPUP SECTION -->
+	<!-- is where the form registration will be displayed -->
 	<div id="popup1" class="overlay">
 		<div class="popup">
 			<div class="scrollable-container"><div class="container-box">
 			    <h3>Registration Form</h3>
-			    <form id="registration-form" >
+			    <form id="registration-form">
             
 			    <label for="name">Name:</label>
 			    <input type="text" id="name" name="name" placeholder="Juan Dela Cruz" required>
 			          
-				<label for="course">Course:</label>
-				<select id="course" name="course" required>
+				<label for="program">Program:</label>
+				<select id="program" name="program" required>
 
-			        <option value="" disabled selected hidden>Select Course</option>
-
+			        <option value="" disabled selected hidden>Select Program</option>
 			        <optgroup label="College of Computer Studies">
-			        	<option value="Computer-Science">Computer Science</option>
-			        	<option value="Information-Technology">Information Technology</option>
-			        	<option value="Information-Systems">Information Systems</option>
-			        	<option value="Interactive-Entertainment">Interactive Entertainment</option>
+			        	<option value="Computer Science">Computer Science</option>
+			        	<option value="Information Technology">Information Technology</option>
+			        	<option value="Information Systems">Information Systems</option>
+			        	<option value="Interactive Entertainment">Interactive Entertainment</option>
 			        </optgroup>
 			        <optgroup label="College of Engineering">
-			        	<option value="Civil-Engineering">Civil Engineering</option>
-			        	<option value="Computer-Engineering">Computer Engineering</option>
-			        	<option value="Electronics-Engineering">Electronics Engineering</option>
-			        	<option value="Mechanical-Engineering">Mechanical Engineering</option>
+			        	<option value="Civil Engineering">Civil Engineering</option>
+			        	<option value="Computer Engineering">Computer Engineering</option>
+			        	<option value="Electronics Engineering">Electronics Engineering</option>
+			        	<option value="Mechanical Engineering">Mechanical Engineering</option>
 			        </optgroup>
 			        <optgroup label="College of Art & Sciences">
 			        	<option value="Architecture">Architecture</option>
-			        	<option value="Asian-Studies">Asian Studies</option>
+			        	<option value="Asian Studies">Asian Studies</option>
 			        	<option value="Chemistry">Chemistry</option>
-			        	<option value="Communication-Studies">Communication Studies</option>
+			        	<option value="Communication Studies">Communication Studies</option>
 			        </optgroup>	
 			        <optgroup label="College of Business">
 			        	<option value="Accounting">Accounting</option>
-			        	<option value="Business-Administration">Business Administration</option>
-			        	<option value="Human-Resources">Human Resources</option>
+			        	<option value="Business Administration">Business Administration</option>
+			        	<option value="Human Resources">Human Resources</option>
 			        	<option value="Marketing">Marketing</option>
 			        </optgroup> 
 				</select>
 			              
 			    <label for="year">Year Level:</label>
 			    <select id="year" name="year" required>
-			        <option value="" disabled selected hidden>Select Year</option>
+			        <option value="" disabled selected hidden>Select Year Level</option>
 			        <option value="1">1</option>
 			        <option value="2">2</option>
 			        <option value="3">3</option>
@@ -80,12 +81,13 @@
 			    <label>Gender:</label> <br />
 			        <input type="radio" id="male" name="gender" value="Male" required> Male
 			        <input type="radio" id="female" name="gender" value="Female" required> Female
+			        <input type="radio" id="not" name="gender" value="not" required> Prefer not to say
 			    <br />    
 
 			    <label for="address">Address:</label>
 			    <textarea type="text" id="address" name="address" placeholder="4321 Sesame Street, Muntinlupa City" required></textarea>     
 			            
-			    <label for="email">Email:</label>
+			    <label for="email">Email Address:</label>
 			    <input type="email" id="email" name="email" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" placeholder="someone@example.com" required>
 			                
 			    <label for="contact">Contact Number:</label>
@@ -101,6 +103,7 @@
     		</div></div>
 		</div>
 	</div>
+
 	<script type="text/javascript" src="./script.js"></script>
 </body>
 </html>

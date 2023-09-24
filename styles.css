@@ -22,7 +22,8 @@
 */
 
 /* ======================================================= */
-/* home page style										   */
+/* 	home page style :
+	- adjusting the screen size accordingly
 /* ======================================================= */
 @font-face {
 	font-family: 'Poppins';
@@ -38,7 +39,7 @@
 @media screen and (max-width: 1300px) {
 	.box { width: 80%; }
 	.popup { width: 80%; }
-	.scrollable-container { height: 300px; }
+	.scrollable-container { height: 450px; }
 }
 
 @media screen and (max-width: 800px) {
@@ -102,7 +103,6 @@ body {
 	margin: 60px auto;
 	overflow-y: auto;
 	overflow-x: hidden;
-	overflow-wrap: break-word:
 }
 
 p { margin: 30px auto; }
@@ -127,7 +127,7 @@ a { text-decoration: none; }
 }
 
 /* ======================================================= */
-/* Register button style								   */
+/* Register button design								   */
 /* ======================================================= */
 .Btn {
 	align-items: center;
@@ -207,10 +207,6 @@ a { text-decoration: none; }
 .overlay:target {
 	opacity: 1;
 	visibility: visible;
-}
-
-.container {
-	overflow-wrap: ;
 }
 
 .popup {
