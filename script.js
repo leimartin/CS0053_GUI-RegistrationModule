@@ -18,7 +18,7 @@ registrationForm.addEventListener('submit', function (event) {
 
     event.preventDefault(); 
 
-    // validating form fields
+    // declaration to be validated
     var name = document.getElementById('name').value;
     var course = document.getElementById('course').value;
     var year = document.getElementById('year').value;
